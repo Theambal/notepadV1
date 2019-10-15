@@ -1,4 +1,3 @@
-# encoding: utf-8
 class Post
 
   def self.post_types
@@ -22,11 +21,9 @@ class Post
   end
 
   def save
-    file = File.new(file_path, 'w:(UTF-8)')
-    for item in to_strings do
-      
-      file.puts(item)
-    end
+    file = File.new(file_path, 'w:UTF-8')
+
+    to_strings.each { |string| file.puts(string) }
 
     file.close
   end

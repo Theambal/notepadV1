@@ -1,4 +1,3 @@
-# encoding: utf-8
 require "date"
 
 class Task < Post
