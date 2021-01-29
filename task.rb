@@ -1,5 +1,3 @@
-require "date"
-
 class Task < Post
   def initialize
     super
@@ -8,11 +6,11 @@ class Task < Post
   end
 
   def read_from_console
-    puts "Что надо сделать?"
+    puts 'Что надо сделать?'
 
     @text = STDIN.gets.chomp
 
-    puts "К какому часлу надо сделать? дату в формате дд. мм. гггг."
+    puts 'К какому часлу надо сделать? дату в формате дд. мм. гггг.'
 
     input = STDIN.gets.chomp
 
@@ -22,8 +20,6 @@ class Task < Post
   def to_strings
     time_string = "Создано: #{@created_at.strftime('%Y.%m.%d, %H:%M:%S')}\n\r \n\r"
     deadline = "Крайний срок: #{@due_date}"
-    return [deadline, @text, time_string]
+    [deadline, @text, time_string]
   end
-
-
 end

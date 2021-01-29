@@ -1,11 +1,10 @@
 class Post
-
   def self.post_types
-    return [Memo, Link, Task]
+    [Memo, Link, Task]
   end
-  
+
   def self.create(type_index)
-    return post_types[type_index].new
+    post_types[type_index].new
   end
 
   def initialize
@@ -15,7 +14,6 @@ class Post
 
   def read_from_console
   end
-
 
   def to_strings
   end
@@ -33,7 +31,6 @@ class Post
 
     file_name = @created_at.strftime("#{self.class.name}_%Y-%m-%d_%H-%M-%S.txt")
 
-    return current_path + "/" + file_name
+    current_path + "/" + file_name
   end
-
 end

@@ -1,11 +1,12 @@
-require_relative "post.rb"
-require_relative "memo.rb"
-require_relative "task.rb"
-require_relative "link.rb"
 
-puts "Привет я твой блокнот!"
-puts "Что хотите записать в блокнот?"
+require 'date'
+require_relative 'post'
+require_relative 'memo'
+require_relative 'task'
+require_relative 'link'
 
+puts 'Привет я твой блокнот!'
+puts 'Что хотите записать в блокнот?'
 
 choices = Post.post_types
 
@@ -25,4 +26,4 @@ entry.read_from_console
 
 entry.save
 
-puts "Ура запись сохранена!"
+puts 'Ура запись сохранена!'
